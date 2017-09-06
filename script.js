@@ -3,8 +3,9 @@ var ctx = canvas.getContext("2d"); /*The drawing context for the canvas*/
 
 var x = canvas.width/2;
 var y = canvas.height - 30;
-var dx = 2;
-var dy = -2;
+var ballSpeed = 4;
+var dx = ballSpeed;
+var dy = -ballSpeed;
 var ballRadius = 10;
 var paddleWidth = 75;
 var paddleHeight = 10;
