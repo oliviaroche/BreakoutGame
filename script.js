@@ -20,7 +20,7 @@ var brickPadding = 10;
 var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
 var score = 0;
-var lives = 3;
+var lives = 5;
 
 var bricks = [];
 	for (var c = 0; c < brickColumnCount; c++) {
@@ -139,8 +139,8 @@ function draw() {
 			} else {
 				x = canvas.width/2;
 				y = canvas.height - 30;
-				dx = 2;
-				dy = -2;
+				dx = ballSpeed;
+				dy = -ballSpeed;
 				paddleX = (canvas.width - paddleWidth)/2;
 
 			}
