@@ -6,6 +6,9 @@
 body {
 	background-image: url(https://s26.postimg.org/8wt3njjs9/chris-barbalis-101972.jpg);
 	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
 }
 
 #myCanvas {
