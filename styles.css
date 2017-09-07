@@ -3,6 +3,11 @@
 	margin: 0;
 }
 
+body {
+	background-image: url(https://s26.postimg.org/8wt3njjs9/chris-barbalis-101972.jpg);
+	background-size: cover;
+}
+
 #myCanvas {
 	background: #eee;
 	display: block;
