@@ -22,6 +22,9 @@ var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
 var score = 0;
 var lives = 5;
+var transparency = 0.9;
+var blackColor = "rgba(0, 0, 0,"+transparency+")"
+var brickColor = "rgba(33, 138, 198, "+transparency+")";
 
 var bricks = [];
 	for (var c = 0; c < brickColumnCount; c++) {
@@ -44,7 +47,7 @@ function drawBricks() {
 				bricks[c][r].y = brickY;
 				ctx.beginPath();
 				ctx.rect(brickX, brickY, brickWidth, brickHeight);
-				ctx.fillStyle = "#DD2300";
+				ctx.fillStyle = brickColor;
 				ctx.fill();
 				ctx.closePath();
 			}
@@ -72,7 +75,7 @@ function drawBall() {
 	//drawing code
 	ctx.beginPath();
 	ctx.arc(x, y, ballRadius, 0, Math.PI*2); // x, y, radius, start angle, end angle (angles in radians). Math.PI*2 = 6.28 radians 360 degrees
-	ctx.fillStyle = "#0095DD";
+	ctx.fillStyle = brickColor;
 	ctx.fill();
 	ctx.closePath();
 }
@@ -80,7 +83,7 @@ function drawBall() {
 function drawPaddle() {
 	ctx.beginPath();
 	ctx.rect(paddleX, paddleY, paddleWidth, paddleHeight);
-	ctx.fillStyle = "#0095DD";
+	ctx.fillStyle = brickColor;
 	ctx.fill();
 	ctx.closePath();
 }
@@ -107,18 +110,19 @@ function collisionDetection() {
 
 function drawScore() {
 	ctx.font = "16px Arial";
-	ctx.fillStyle = "0095DD";
+	ctx.fillStyle = blackColor;
 	ctx.fillText("Score: " + score, 8, 20);
 }
 
 function drawLives() {
 	ctx.font = "16px Arial";
-	ctx.fillStyle = "0095DD";
+	ctx.fillStyle = blackColor;
 	ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
 }
 
 function draw() {
 	//drawing code
+	
 	ctx.clearRect(0, 0,  canvas.width, canvas.height);
 	drawBall();
 	drawPaddle();
