@@ -3,14 +3,19 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Breakout Game</title>
-	<h2>Breakout!</h2>
-	<p>Click to begin. Use the mouse to move the paddle.<br>
-	Keep the ball in the air and detroy all the bricks to win.<br>
-	Good Luck!</p>
 	<link rel="stylesheet" href="styles.css"/>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 </head>
 <body>
-	<canvas id="myCanvas" width="480" height="320"></canvas>
+	<div class="content">
+		<div class="instructions">
+			<h2>Breakout!</h2>
+			<p>Click to begin.</p>
+			<p>Use the mouse to move the paddle.</br>Keep the ball in the air.</br>Destroy all the bricks to win.</p>
+			<p>Good Luck!</p>
+		</div>
+		<canvas id="myCanvas" width="480" height="320"></canvas>
+	</div>
 	<script src="script.js"></script>
 </body>
 </html>
